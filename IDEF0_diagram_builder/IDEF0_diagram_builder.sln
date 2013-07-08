@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDEF0_diagram_builder", "IDEF0_diagram_builder\IDEF0_diagram_builder.csproj", "{EB5FC7E1-30FE-4C15-BE1A-9DC63027C8E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDEF0_diagram_builder.Web", "IDEF0_diagram_builder.Web\IDEF0_diagram_builder.Web.csproj", "{7ED613C9-A980-4CF3-8B33-6478FD9D05BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB5FC7E1-30FE-4C15-BE1A-9DC63027C8E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5FC7E1-30FE-4C15-BE1A-9DC63027C8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5FC7E1-30FE-4C15-BE1A-9DC63027C8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5FC7E1-30FE-4C15-BE1A-9DC63027C8E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED613C9-A980-4CF3-8B33-6478FD9D05BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED613C9-A980-4CF3-8B33-6478FD9D05BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED613C9-A980-4CF3-8B33-6478FD9D05BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED613C9-A980-4CF3-8B33-6478FD9D05BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
