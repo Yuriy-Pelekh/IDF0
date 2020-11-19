@@ -17,30 +17,31 @@ build_script:
 
 on_success:
 - ps: echo "Success"
-- ps: >-
-    $apiUrl = 'https://ci.appveyor.com/api'
-    $token = $Env:APPVEYOR_TOKEN
+- ps: |
     $headers = @{
-      "Authorization" = "$token"
+      "Authorization" = "$Env:APPVEYOR_TOKEN"
       "Content-type" = "application/json"
     }
-    $accountName = 'Yuriy-Pelekh'
-    $projectSlug = 'idf0-2'
+
     $branch = $Env:APPVEYOR_REPO_BRANCH
+
     $pullRequestHeadBranch = $Env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH
+
     $pullRequestId = $Env:APPVEYOR_PULL_REQUEST_NUMBER
 
     echo "branch = $branch pullRequestHeadBranch = $pullRequestHeadBranch pullRequestId = $pullRequestId"
     
     $body = @{
-      accountName = "$accountName"
-      projectSlug = "$projectSlug"
+      accountName = "Yuriy-Pelekh"
+      projectSlug = "idf0-2"
       branch = "$branch"
       pullRequestHeadBranch = "$pullRequestHeadBranch"
       pullRequestId = "pullRequestId"
     }
+
     $bodyAsJson = $body | ConvertTo-json
-    Invoke-Restmethod -uri "$apiUrl/builds" -Headers $headers -Method "Post" -Body $bodyAsJson
+
+    Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Headers $headers -Method "Post" -Body $bodyAsJson
 
 on_failure:
 - ps: echo "Fail"
