@@ -8,7 +8,7 @@ environment:
 
 skip_commits:
   files:
-    - appveyor_Library.yml
+    - appveyor_2.yml
 
 image: Ubuntu2004
 
