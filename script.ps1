@@ -1,4 +1,3 @@
-echo $Env:APPVEYOR_TOKEN
 $headers = @{
   "Authorization" = "$Env:APPVEYOR_TOKEN"
   "Content-type" = "application/json"
