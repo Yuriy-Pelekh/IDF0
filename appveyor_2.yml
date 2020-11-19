@@ -1,0 +1,41 @@
+version: 1.0.{build}-{branch}
+build:
+  verbosity: minimal
+
+environment:
+  APPVEYOR_TOKEN:
+    secure: 7hdKHlNyvrMs7WCTMr2Eaw1nb25MxQTABu/Nux7gyWM=
+
+skip_commits:
+  files:
+    - appveyor_1.yml
+
+image: Ubuntu2004
+
+build_script:
+- ps: echo "Build script goes here"
+
+on_success:
+- ps: echo "Success"
+
+on_failure:
+- ps: echo "Fail"
+
+notifications:
+- provider: Webhook
+  url: https://ci.appveyor.com/api/builds
+  method: POST
+  headers:
+    Authorization:
+      secure: 7hdKHlNyvrMs7WCTMr2Eaw1nb25MxQTABu/Nux7gyWM=
+  body: >-
+    {
+      accountName: "Yuriy-Pelekh",
+      projectSlug: "idf0-1",
+      branch: "{{branch}}",
+      pullRequestHeadBranch: "{{pullRequestHeadBranch}}"
+      pullRequestId: "{{pullRequestId}}"
+    }
+  on_build_success: true
+  on_build_failure: false
+  on_build_status_changed: false
