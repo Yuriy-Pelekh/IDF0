@@ -17,7 +17,8 @@ build_script:
 
 on_success:
 - ps: echo "Success"
-- ps: |
+- ps: >-
+
     $headers = @{
 
       "Authorization" = "$Env:APPVEYOR_TOKEN"
