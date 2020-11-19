@@ -20,7 +20,7 @@ on_success:
 - ps: ./script.ps1
 
 on_failure:
-#- ps: echo "Fail"
+- ps: echo "Fail"
 
 notifications:
 - provider: Webhook
@@ -35,7 +35,8 @@ notifications:
       projectSlug: "idf0-2",
       branch: "{{branch}}",
       pullRequestHeadBranch: "{{pullRequestHeadBranch}}",
-      pullRequestId: "{{pullRequestId}}"
+      pullRequestId: "{{pullRequestId}}",
+      message: "webhook idf0-1"
     }
   on_build_success: true
   on_build_failure: false
