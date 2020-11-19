@@ -33,7 +33,7 @@ notifications:
       accountName: "Yuriy-Pelekh",
       projectSlug: "idf0-1",
       branch: "{{branch}}",
-      pullRequestHeadBranch: "{{pullRequestHeadBranch}}"
+      pullRequestHeadBranch: "{{pullRequestHeadBranch}}",
       pullRequestId: "{{pullRequestId}}"
     }
   on_build_success: true
