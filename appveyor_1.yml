@@ -35,8 +35,7 @@ notifications:
       projectSlug: "idf0-2",
       branch: "{{branch}}",
       pullRequestHeadBranch: "{{pullRequestHeadBranch}}",
-      pullRequestId: "{{pullRequestId}}",
-      message: "webhook idf0-1"
+      pullRequestId: "{{pullRequestId}}"
     }
   on_build_success: true
   on_build_failure: false
