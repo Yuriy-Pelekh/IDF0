@@ -11,7 +11,7 @@ $body = @{
   projectSlug = "idf0-2"
   branch = "$branch"
   pullRequestHeadBranch = "$pullRequestHeadBranch"
-  pullRequestId = "pullRequestId"
+  pullRequestId = "$pullRequestId"
 }
 $bodyAsJson = $body | ConvertTo-json
 Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Headers $headers -Method "Post" -Body $bodyAsJson
