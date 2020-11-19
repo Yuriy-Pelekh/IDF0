@@ -19,8 +19,11 @@ on_success:
 - ps: echo "Success"
 - ps: |
     $headers = @{
+
       "Authorization" = "$Env:APPVEYOR_TOKEN"
+
       "Content-type" = "application/json"
+
     }
 
     $branch = $Env:APPVEYOR_REPO_BRANCH
@@ -32,11 +35,17 @@ on_success:
     echo "branch = $branch pullRequestHeadBranch = $pullRequestHeadBranch pullRequestId = $pullRequestId"
     
     $body = @{
+    
       accountName = "Yuriy-Pelekh"
+      
       projectSlug = "idf0-2"
+      
       branch = "$branch"
+      
       pullRequestHeadBranch = "$pullRequestHeadBranch"
+      
       pullRequestId = "pullRequestId"
+      
     }
 
     $bodyAsJson = $body | ConvertTo-json
