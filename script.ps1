@@ -11,9 +11,7 @@ Write-Output ">> pullRequestId = $pullRequestId branch = $branch pullRequestHead
 $body = "{
   'accountName': '$accountName',
   'projectSlug': '$projectSlug',
-  'branch': '$branch',
-  'pullRequestHeadBranch': '$pullRequestHeadBranch',
-  'pullRequestId': '$pullRequestId',
+  'branch': '$branch'
 }"
 
 Write-Output $body
