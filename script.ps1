@@ -5,15 +5,13 @@ $headers = @{
 $accountName = "Yuriy-Pelekh"
 $projectSlug = "idf0-2"
 $branch = $Env:APPVEYOR_REPO_BRANCH
-$pullRequestHeadBranch = $Env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH
-$pullRequestId = $Env:APPVEYOR_PULL_REQUEST_NUMBER
+#$pullRequestHeadBranch = $Env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH
+#$pullRequestId = $Env:APPVEYOR_PULL_REQUEST_NUMBER
 
 $body = @{
   "accountName" = "$accountName"
   "projectSlug" = "$projectSlug"
   "branch" = "$branch"
 }
-
 $bodyAsJson = $body | ConvertTo-json
-
 Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Headers $headers -Method "Post" -Body $bodyAsJson
