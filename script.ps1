@@ -5,7 +5,7 @@ $headers = @{
 $branch = $Env:APPVEYOR_REPO_BRANCH
 $pullRequestHeadBranch = $Env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH
 $pullRequestId = $Env:APPVEYOR_PULL_REQUEST_NUMBER
-echo "branch = $branch pullRequestHeadBranch = $pullRequestHeadBranch pullRequestId = $pullRequestId"
+echo ">> branch = $branch pullRequestHeadBranch = $pullRequestHeadBranch pullRequestId = $pullRequestId <<"
 #if ($pullRequestId) {
 #  $branch = $NULL
 #  $pullRequestHeadBranch = $NULL
