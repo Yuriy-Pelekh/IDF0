@@ -13,7 +13,7 @@ $body = "{
   'projectSlug': '$projectSlug',
   'branch': '$branch',
   'pullRequestHeadBranch': '$pullRequestHeadBranch',
-  'pullRequestId': '$pullRequestId'
+  'pullRequestId': '$pullRequestId',
 }"
 
 Write-Output $body
