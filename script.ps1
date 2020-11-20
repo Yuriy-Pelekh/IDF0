@@ -6,9 +6,11 @@ $headers = @{
   "Content-type" = "application/json"
 };
 $body = @{
-  "accountName" = "$accountName"
-  "projectSlug" = "$projectSlug"
-  "branch" = "$branch"
+  accountName = "$accountName"
+  projectSlug = "$projectSlug"
+  branch = "$branch"
+  pullRequestHeadBranch = "$pullRequestHeadBranch"
+  pullRequestId = "$pullRequestId"
 };
 $bodyAsJson = $body | ConvertTo-json
 Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Method "Post" -Headers $headers -Body $bodyAsJson
