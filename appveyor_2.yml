@@ -9,6 +9,7 @@ environment:
 skip_commits:
   files:
     - appveyor_1.yml
+    - script.ps1
 
 image: Ubuntu2004
 
