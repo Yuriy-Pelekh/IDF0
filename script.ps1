@@ -9,8 +9,8 @@ $pullRequestHeadBranch = $Env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH
 $pullRequestId = $Env:APPVEYOR_PULL_REQUEST_NUMBER
 
 $body = @{
-  "accountName" = "$accountName",
-  "projectSlug" = "$projectSlug",
+  "accountName" = "$accountName"
+  "projectSlug" = "$projectSlug"
   "branch" = "$branch"
 }
 
