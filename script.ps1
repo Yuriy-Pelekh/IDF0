@@ -15,4 +15,9 @@ $body = @{
 }
 
 Write-Output $body
-Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Headers $headers -Method "Post" -Body $body | ConvertTo-json
+
+$bodyAsJson = $body | ConvertTo-json
+
+Write-Output $bodyAsJson
+
+Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Headers $headers -Method "Post" -Body $bodyAsJson
