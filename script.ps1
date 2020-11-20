@@ -11,4 +11,4 @@ $body = @{
   "branch" = "$branch"
 };
 $bodyAsJson = $body | ConvertTo-json
-Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Headers $headers -Method "Post" -Body $bodyAsJson
+Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Method "Post" -Headers $headers -Body $bodyAsJson
