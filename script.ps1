@@ -16,4 +16,5 @@ $body = @{
   pullRequestId = "$pullRequestId"
 }
 $bodyAsJson = $body | ConvertTo-json
+echo $bodyAsJson
 Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Headers $headers -Method "Post" -Body $bodyAsJson
