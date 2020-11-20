@@ -9,10 +9,15 @@ $pullRequestHeadBranch = $Env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH
 $pullRequestId = $Env:APPVEYOR_PULL_REQUEST_NUMBER
 
 $body = @{
-  "accountName" = "$accountName",
-  "projectSlug" = "$projectSlug",
+  "accountName" = "$accountName"
+  "projectSlug" = "$projectSlug"
   "branch" = "$branch"
 }
 
 Write-Output $body
-Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Headers $headers -Method "Post" -Body $body
+
+$bodyAsJson = $body | ConvertTo-json
+
+Write-Output $bodyAsJson
+
+Invoke-Restmethod -uri "https://ci.appveyor.com/api/builds" -Headers $headers -Method "Post" -Body $bodyAsJson
